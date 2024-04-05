@@ -10,7 +10,10 @@
 # popitem - Apaga o último item adicionado
 # update - Atualiza um dicionário com outro
 
-
+lst = [ 'spam' , 'and' , 'eggs' ]
+lst[2] = 'toast'
+print(''.join(lst))
+print(' '.join(lst))
 
 p1 = {
     'nome': 'Sabrina',
