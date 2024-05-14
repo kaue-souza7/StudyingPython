@@ -10,5 +10,4 @@ def soma(x, y):
     else:
         print('Nao digitou numero')
 
-
-# print(esta_correto())
+print(esta_correto())

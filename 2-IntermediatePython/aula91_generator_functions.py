@@ -10,6 +10,6 @@ def contador_generator(limite):
 # for n in contador_generator(100):
 #     print(n)
         
-cont = contador_generator(100000000)
+cont = contador_generator(1000000)
 print(next(cont))
 print(next(cont))

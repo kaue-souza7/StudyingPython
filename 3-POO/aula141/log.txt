@@ -1,0 +1,10 @@
+Error: Parte de: LogFile MIXIN
+Success: Parte de: LogFile MIXIN
+Error: Parte de: LogFile MIXIN
+Success: Parte de: LogFile MIXIN
+Success: Iphone 15 está ligado LogFile MIXIN
+Success: Galaxy S está ligado LogFile MIXIN
+Error: Iphone 15 está desligado LogFile MIXIN
+Error: Galaxy S está desligado LogFile MIXIN
+Error: Iphone 15 está desligado LogFile MIXIN
+Error: Galaxy S está desligado LogFile MIXIN
