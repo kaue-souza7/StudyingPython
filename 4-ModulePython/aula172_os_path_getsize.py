@@ -1,0 +1,62 @@
+import math 
+from itertools import count
+import os
+
+# os.path.getsize e os.stat para todo os arquivos 
+
+def formata_tamanho(tamanho_em_bytes: int, base: int = 1000) -> str:
+    """Formata um tamanho, de bytes para o tamanho apropriado"""
+
+    # Original:
+    # https://stackoverflow.com/questions/5194057/better-way-to-convert-file-sizes-in-python
+
+    # Se o tamanho for menor ou igual  a0, 0B.
+    if tamanho_em_bytes <= 0:
+        return "0B"
+
+    # Tupla com os tamanhos
+    #                      0    1     2     3     4     5
+    abreviacao_tamanhos = "B", "KB", "MB", "GB", "TB", "PB"
+    # Logaritmo -> https://brasilescola.uol.com.br/matematica/logaritmo.htm
+    # math.log vai retornar o logaritmo do tamanho_em_bytes
+    # com a base (1000 por padrão), isso deve bater
+    # com o nosso índice na abreviação dos tamanhos
+    indice_abreviacao_tamanhos = int(math.log(tamanho_em_bytes, base))
+    # Por quanto nosso tamanho deve ser dividido para
+    # gerar o tamanho correto.
+    potencia = base ** indice_abreviacao_tamanhos
+    # Nosso tamanho final
+    tamanho_final = tamanho_em_bytes / potencia
+    # A abreviação que queremos
+    abreviacao_tamanho = abreviacao_tamanhos[indice_abreviacao_tamanhos]
+    return f'{tamanho_final:.2f} {abreviacao_tamanho}'
+
+
+
+
+path = os.path.join('C:\\Users', 'kauek', 'OneDrive', 'Área de Trabalho', 'EXEMPLO')
+counter = count()
+
+for root, dirs, files in os.walk(path):
+    the_counter = next(counter)
+    print(the_counter, 'Pasta Atual: ', root)
+    
+    for dir_ in dirs:
+        print(' ', the_counter, 'Dir: ', root)
+    
+    for file_ in files:
+        caminho_comleto_file = os.path.join(root, file_)
+        # PEGAR O TAMANHO DOIS JEITO: 
+        # 1:
+        # tamanho = os.path.getsize(caminho_comleto_file) # 1:
+        #2:
+        stats = os.stat(caminho_comleto_file) # 2
+        tamanho = stats.st_size # 2
+        print('     ', the_counter, 'File: ', caminho_comleto_file, formata_tamanho(tamanho))
+
+
+
+print(formata_tamanho(1000))
+print(formata_tamanho(1000000))
+print(formata_tamanho(1000000000))
+print(formata_tamanho(1000000000000))

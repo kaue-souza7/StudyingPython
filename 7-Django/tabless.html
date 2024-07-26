@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        table{
+            border-collapse: collapse;
+            width: 100%;
+            font-family: sans-serif;
+
+        }
+
+        table thead{
+            background-color: rgb(222, 222, 222);
+        }
+
+        table td, table th {
+            border: 1px solid gray;
+            padding: 5px;
+            text-align: left;
+        }
+
+        table caption{
+            caption-side: bottom;
+            font-style: italic;
+            text-align: right;
+        }
+
+        table tfoot{
+            background-color: rgb(222, 222, 222);
+            font-style: italic;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <p>Lorem ipsum dolor sit amet.</p>
+
+
+    <table>
+        <caption>Description of tabele</caption>
+        <thead>
+            <tr>
+                <th>Ttitle 1</th>
+                <th>Ttitle 2</th>
+                <th>Ttitle 3</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Corpo 1</td>
+                <td>Corpo 2</td>
+                <td>Corpo 3</td>
+            </tr>
+
+            <tr>
+                <td
+                rowspan="2" colspan="2">Lorem ipsum dolor sit amet consectetur adipisicing elit. </td>
+                <td>Corpo 2</td>
+                <!-- <td>Corpo 3</td> -->
+            </tr>
+
+            <tr>
+                <!-- <td>Corpo 1</td>
+                <td>Corpo 2</td> -->
+                <td>Corpo 3</td>
+            </tr>
+
+            <tr>
+                <td>Corpo 1</td>
+                <td>Corpo 2</td>
+                <td>Corpo 3</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>Foot 1</td>
+                <td>Foot 2</td>
+                <td>Foot 3</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

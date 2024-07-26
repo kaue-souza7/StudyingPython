@@ -1,0 +1,12 @@
+---------- ESTRUTURA ----------
+Primeiramente o CentralWidget recebe um VBoxLayout (layout na vertical), 
+divido em:  (Info) que é um QLabel, 
+            Display que é um QLineEdit e,
+            buttonsGrid que é um QGridLayout
+
+-> Window
+   -> CentralWidget
+      -> VBoxLayout
+         - QLabel
+         - QLineEdit
+         - QGridLayout

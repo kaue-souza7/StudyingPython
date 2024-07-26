@@ -1,1 +1,1 @@
-# DJANGO
+# The Django module is in another folder 
