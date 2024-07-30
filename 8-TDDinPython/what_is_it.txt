@@ -1,4 +1,0 @@
-Test-Driven Development (TDD)
- 
-É uma metodologia que permite que os desenvolvedores 
-escrevam códigos mais eficientes e menos propensos a bugs.
